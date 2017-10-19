@@ -78,7 +78,11 @@ function placeOrder() {
         }
     }
 //     alert(txt);exit;
+	if(txt.length == ''){
+		alert('Please Select Min. One Item To Add To Cart.');exit;
+	}else{
 		$('#add_to_cart').load( '<?php echo base_url(); ?>index.php/cart/add_cart/' + txt );
+	}
 }
 // END TO 
 
